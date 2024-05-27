@@ -1,5 +1,5 @@
 
-def z1():
+def num1():
     a = int(input("введите количество слов "))
     b = 0
     s = ""
@@ -12,7 +12,7 @@ def z1():
 
 
 
-def z2():
+def num2():
     s = ""
     word = ""
     while word != "стоп":
@@ -21,7 +21,7 @@ def z2():
     print(s)
 
 
-def z3():
+def num3():
     word = str(input())
     if "Ф" in word or "ф" in word:
         print("Ого! Это редкое слово")
@@ -29,7 +29,7 @@ def z3():
         print("Эх, это не очень редкое слово")
 
 
-def z4():
+def num4():
     import random
     n = 0
     x = 0
@@ -54,9 +54,9 @@ def z4():
 
 
 
-z1()
-z2()
-z3()
-z4()
+num1()
+num2()
+num3()
+num4()
 
 
