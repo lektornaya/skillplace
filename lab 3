@@ -1,4 +1,4 @@
-def num1():
+def numeros1():
     a = int(input("введите число = "))
     if a % 3 == 0:
         print("это число делится на 3 ")
@@ -6,7 +6,7 @@ def num1():
         print("введите правильное число")
 
 
-def num2():
+def numeros2():
     try:
         a = int(input("ввод числа "))
         n = 100 / a
@@ -17,7 +17,7 @@ def num2():
     else:
         print(n)
 
-def num3():
+def numeros3():
     date = input("Формат: дд.мм.гггг: ").split(".")
 
     print(date)
@@ -27,7 +27,7 @@ def num3():
         print("не магическая дата")
 
 
-def num4():
+def numeros4():
     tic = input("введите номер билета: ")
     a = 0
     b = 0
@@ -44,7 +44,7 @@ def num4():
         print("не четно")
 
 
-num1()
-num2()
-num3()
-num4()
+numeros1()
+numeros2()
+numeros3()
+numeros4()
