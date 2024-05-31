@@ -1,5 +1,5 @@
 from PIL import Image
-img = Image.open("открытка.jpg")
-area = (100, 100, 400, 400)
+img = Image.open("мост.jpg")
+area = (50, 50, 350, 350)
 cropped_img = img.crop(area)
-cropped_img.save("обрезанная_открытка.jpg")
+cropped_img.save("редачмост.jpg")
