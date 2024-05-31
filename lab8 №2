@@ -1,15 +1,15 @@
 from PIL import Image
 cards = {
-    "Birthday": "birthday_card.jpg",
-    "New Year": "new_year_card.jpg",
-    "Valentine's Day": "valentines_day_card.jpg"
+    "Geologist": "С Днем геолога!.jpg",
+    "Feminizm day": "С Днем Феминизма!.jpg",
+    "Children's day": "С Днем защиты детей!.jpg"
 }
-def show_card(holiday):
-    if holiday in cards:
-        file_name = cards[holiday]
+def show_card(festa):
+    if festa in cards:
+        file_name = cards[festa]
         card = Image.open(file_name)
         card.show()
     else:
-        print("Card for this holiday not found.")
-holiday = input("For which holiday do you need a card? ")
-show_card(holiday)
+        print("Открытка к этому празднику не найдена")
+festa = input("Для какого праздника вам нужна открытка?")
+show_card(festa)
