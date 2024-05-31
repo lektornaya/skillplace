@@ -51,7 +51,7 @@ def numeros3():
         value, key = i.split('-')
         prodotti[key] = value
 
-    file1 = open("DictFile.txt", "w+")
+    file1 = open("ru-en.txt", "w+")
 
     prodotti = dict(sorted(prodotti.items()))
 
