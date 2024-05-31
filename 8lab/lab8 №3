@@ -1,11 +1,11 @@
 from PIL import Image, ImageDraw, ImageFont
 x,y = 10,10
-card = Image.open("birthday_card2.jpg")
+card = Image.open("открыткаПоздравление.jpg")
 name = input("Кого Вы хотите поздравить? ")
 draw = ImageDraw.Draw(card)
-font = ImageFont.truetype("arial.ttf", 50)
+font = ImageFont.truetype("arial.ttf", 30)
 text = name + ", поздравляю!"
-text_color = (255, 0, 0)
+text_color = (0, 0, 255)
 text_width, text_height = draw.textsize(text, font)
 image_width, image_height = card.size
 text_position = (image_width - text_width - 50, image_height - text_height - 50)
