@@ -1,0 +1,15 @@
+from PIL import Image, ImageDraw, ImageFont
+
+disegno = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
+MARK = "Water Mark"
+
+for i in disegno:
+
+    image = Image.open(i)
+    drawing = ImageDraw.Draw(image)
+
+    colour = (0, 0, 0)
+    font = ImageFont.truetype("arial.ttf", 18)
+
+    drawing.text((0,0), MARK, fill=colour, font=font)
+    image.save("disegnoe e MARK" + i)
