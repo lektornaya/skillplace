@@ -1,0 +1,6 @@
+from PIL import Image
+picture = Image.open('keln.jpg')
+picture.show()
+print('Размер: ', picture.size)
+print('Формат: ', picture.format)
+print('Цветовая модель: ', picture.mode)
