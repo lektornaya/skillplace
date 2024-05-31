@@ -1,0 +1,64 @@
+import json
+
+def numeros1():
+    with open('price.json', 'r', encoding='utf-8') as file:
+        prodotti = json.load(file)
+        
+    for ptodotto in prodotti['products']:
+        print(f'Название: {ptodotto["name"]}')
+        print(f'Цена: {ptodotto["price"]}')
+        print(f'Вес: {ptodotto["weight"]}')
+        
+        if ptodotto['available']:
+            print('В Наличии\n')
+        else:
+            print('Нет в наличии\n')
+
+def numeros2():
+    with open('price.json', 'r', encoding='utf-8') as file:
+        prodotti = json.load(file)
+
+    new = {
+        "name": input("Название: "),
+        "price": input("Цена: "),
+        "available": input("Есть ли товар в наличии: "),
+        "weight": int(input("Вес: ")),
+    }
+    prodotti["products"].append(new)
+    
+    with open('price1.json', 'w', encoding='utf-8') as file:
+        json.dump(d, file, indent=4)
+        
+    with open('price1.json', 'r', encoding='utf-8') as file:
+        file = json.load(file)
+
+    for ptodotto in file['products']:
+        print(f'Название: {ptodotto["name"]}')
+        print(f'Цена: {ptodotto["price"]}')
+        print(f'Вес: {ptodotto["weight"]}')
+        
+        if ptodotto['available']:
+            print('В Наличии\n')
+        else:
+            print('Нет в наличии\n')
+            
+def numeros3():
+    prodotti = {}
+    file = open("en-ru.txt")
+    price1 = file.read().split("\n")
+    print(price1)
+    for i in price1:
+        value, key = i.split('-')
+        prodotti[key] = value
+
+    file1 = open("DictFile.txt", "w+")
+
+    prodotti = dict(sorted(prodotti.items()))
+
+    for i, k in prodotti.items():
+        file1.write(f'{i} - {k}\n')
+   file1.close()
+
+numeros1()
+numeros2()
+numeros3()
