@@ -1,0 +1,13 @@
+from PIL import Image
+picture = Image.open('keln.jpg')
+
+pictureitog = picture.reduce(3)
+pictureitog.save('newview.png')
+
+horizon = picture.transpose(Image.FLIP_LEFT_RIGHT)
+vertical = picture.transpose(Image.FLIP_TOP_BOTTOM)
+horizon.save('horizon.png')
+vertical.save('vertical.png')
+
+horizon.show()
+vertical.show()
